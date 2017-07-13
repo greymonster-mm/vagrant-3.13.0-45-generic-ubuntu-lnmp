@@ -1,0 +1,7 @@
+#!/bin/sh
+cd /var/www/html
+symfony new "$@"
+cd "$1"
+composer update
+composer config repositories.woa-lib '{"type": "vcs", "url": "git@git.gameloft.org:woa/woa-lib.git"}'
+composer require woa/woa-lib dev-master
