@@ -23,7 +23,7 @@ cd /vagrant/package
 #sudo tar xvf /vagrant/package/php-7.1.6.tar
 
 cd /vagrant/package/php-7.1.6
-'./configure' '--prefix=/usr/local/php7' '--with-config-file-path=/etc/php7' '--enable-fpm' '--enable-pcntl' '--enable-mysqlnd' '--enable-opcache' '--enable-sockets' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-shmop' '--enable-zip' '--enable-ftp' '--enable-soap' '--enable-xml' '--enable-mbstring' '--disable-rpath' '--disable-debug' '--disable-fileinfo' '--with-mysql=mysqlnd' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-pcre-regex' '--with-iconv' '--with-zlib' '--with-mcrypt' '--with-openssl' '--with-mhash' '--with-xmlrpc' '--with-curl' '--with-imap-ssl' '--with-jpeg-dir=/usr/lib/x86_64-linux-gnu' '--with-freetype-dir=/usr/include/freetype2' '--with-gd'
+'./configure' '--prefix=/usr/local/php7' '--with-config-file-path=/etc/php7' '--enable-fpm' '--enable-pcntl' '--enable-mysqlnd' '--enable-opcache' '--enable-sockets' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-shmop' '--enable-zip' '--enable-ftp' '--enable-soap' '--enable-xml' '--enable-mbstring' '--disable-rpath' '--disable-debug' '--disable-fileinfo' '--with-mysql=mysqlnd' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-pcre-regex' '--with-iconv' '--with-zlib' '--with-mcrypt' '--with-openssl' '--with-mhash' '--with-xmlrpc' '--with-curl' '--with-imap-ssl' '--with-jpeg-dir=/usr/lib/x86_64-linux-gnu' '--with-freetype-dir=/usr/include/freetype2' '--with-gd' 
 sudo make && sudo make install
 sudo mkdir /etc/php7/apache2 -p
 sudo cp /vagrant/package/php7.ini  /etc/php7/apache2/php.ini
@@ -34,7 +34,7 @@ sudo mkdir /usr/local/php7/var/
 sudo /usr/local/php7/sbin/php-fpm -c /etc/php5/apache2/php.ini -y /usr/local/php7/etc/php-fpm.conf
 
 cd /vagrant/package/php-5.6.30
-'./configure' '--prefix=/usr/local/php5' '--with-config-file-path=/etc/php5' '--enable-fpm' '--enable-pcntl' '--enable-mysqlnd' '--enable-opcache' '--enable-sockets' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-shmop' '--enable-zip' '--enable-ftp' '--enable-soap' '--enable-xml' '--enable-mbstring' '--disable-rpath' '--disable-debug' '--disable-fileinfo' '--with-mysql=mysqlnd' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-pcre-regex' '--with-iconv' '--with-zlib' '--with-mcrypt' '--with-gd' '--with-openssl' '--with-mhash' '--with-xmlrpc' '--with-curl' '--with-imap-ssl'
+'./configure' '--prefix=/usr/local/php5' '--with-config-file-path=/etc/php5' '--enable-fpm' '--enable-pcntl' '--enable-mysqlnd' '--enable-opcache' '--enable-sockets' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-shmop' '--enable-zip' '--enable-ftp' '--enable-soap' '--enable-xml' '--enable-mbstring' '--disable-rpath' '--disable-debug' '--disable-fileinfo' '--with-mysql=mysqlnd' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-pcre-regex' '--with-iconv' '--with-zlib' '--with-mcrypt' '--with-gd' '--with-openssl' '--with-mhash' '--with-xmlrpc' '--with-curl' '--with-imap-ssl' '--with-jpeg-dir=/usr/include' '--with-freetype-dir=/usr/include/freetype'
 sudo make && sudo make install
 sudo mkdir /etc/php5/apache2 -p
 sudo cp /vagrant/package/php5.ini  /etc/php5/apache2/php.ini
