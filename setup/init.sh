@@ -4,6 +4,10 @@ sudo cp /vagrant/package/source.list /etc/apt/sources.list
 sudo apt-get update
 sudo cp /vagrant/package/rc.local /etc/rc.local
 
+#php扩展phpize的依赖
+sudo apt-get install autoconf
+sudo apt-get install libicu-dev
+
 #默认用户
 sudo useradd -m -d /home/menmei -s /bin/bash menmei
 echo -e "menmei\nmenmei\n" | sudo passwd menmei
